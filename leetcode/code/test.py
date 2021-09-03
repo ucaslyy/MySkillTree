@@ -1,5 +1,18 @@
 from leetcode.code.containsDuplicate import Solution as containsDuplicate_Solution
 from leetcode.code.maxSubArray import Solution as maxSubArray_Solution
+from leetcode.code.twoSum import Solution as TwoSumSolution
+from leetcode.code.merge import Solution as MergeSolution
+
+
+def test_merge():
+    data = [
+        [[1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3],
+        [[1], 1, [], 0],
+    ]
+    for item in data:
+        so = MergeSolution()
+        so.merge(nums1=item[0], m=item[1], nums2=item[2], n=item[3])
+        print(item[0])
 
 
 def test_containsDuplicate():
@@ -27,6 +40,19 @@ def test_maxSubArray():
         print(so.maxSubArray(nums=item[0]))
 
 
+def test_two_sum():
+    data = [
+        [[2, 7, 11, 15], 9],
+        [[3, 2, 4], 6],
+        [[3, 3], 6],
+    ]
+    for item in data:
+        so = TwoSumSolution()
+        print(so.twoSum(nums=item[0], target=item[1]))
+
+
 if __name__ == '__main__':
     # test_containsDuplicate()
-    test_maxSubArray()
+    # test_maxSubArray()
+    # test_two_sum()
+    test_merge()
