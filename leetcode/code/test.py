@@ -2,6 +2,30 @@ from leetcode.code.containsDuplicate import Solution as containsDuplicate_Soluti
 from leetcode.code.maxSubArray import Solution as maxSubArray_Solution
 from leetcode.code.twoSum import Solution as TwoSumSolution
 from leetcode.code.merge import Solution as MergeSolution
+from leetcode.code.intersect import Solution as IntersectSolution
+from leetcode.code.maxProfit import Solution as MaxProfitSolution
+
+
+def test_max_profit():
+    data = [
+        [[7, 1, 5, 3, 6, 4]],
+        [[7, 6, 4, 3, 1]],
+    ]
+    for item in data:
+        so = MaxProfitSolution()
+        res = so.maxProfit(prices=item[0])
+        print(res)
+
+
+def test_intersect():
+    data = [
+        [[1, 2, 2, 1], [2, 2]],
+        [[4, 9, 5], [9, 4, 9, 8, 4]],
+    ]
+    for item in data:
+        so = IntersectSolution()
+        res = so.intersect(nums1=item[0], nums2=item[1])
+        print(res)
 
 
 def test_merge():
@@ -55,4 +79,6 @@ if __name__ == '__main__':
     # test_containsDuplicate()
     # test_maxSubArray()
     # test_two_sum()
-    test_merge()
+    # test_merge()
+    # test_intersect()
+    test_max_profit()
