@@ -31,8 +31,8 @@ class Solution:
         for r in range(0, length, step):
             for c in range(0, length, step):
                 tmp = set()
-                for i in range(r, r+step):
-                    for j in range(c, c+step):
+                for i in range(r, r + step):
+                    for j in range(c, c + step):
                         if board[i][j] in tmp:
                             return False
                         elif board[i][j] == '.':
